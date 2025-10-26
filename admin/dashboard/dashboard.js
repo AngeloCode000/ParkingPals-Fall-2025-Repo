@@ -8,7 +8,7 @@ logoutButton.addEventListener("click", (e) => {
 
      
     alert("Logging Out . . .");
-    window.location.href = 'login/login.html';
+    window.location.href = 'homepage/homepage.html';
     //location.reload();
 
 })

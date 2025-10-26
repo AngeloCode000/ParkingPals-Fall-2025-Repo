@@ -9,11 +9,15 @@ loginButton.addEventListener("click", (e) => {
     const password = loginForm.password.value;
 
     if (username === "user" && password === "web_dev") {
-        alert("You have successfully logged in.");
-        //window.location.href = '/Users/benma/Desktop/Parking_pals/ParkingPals-Fall-2025-Repo/dashboard/dashboard.html';
-        window.location.href = "dashboard/dashboard.html"
+        alert("You have successfully logged in as a user.");
+        window.location.href = "user/dashboard/dashboard.html"
         //location.reload();
-    } else {
+    } else if (username === "admin" && password === "web_dev") {
+        alert("You have successfully logged in as an admin.");
+        window.location.href = "admin/dashboard/dashboard.html"
+        //location.reload();
+    }
+    else {
         loginErrorMsg.style.opacity = 1;
     }
 })
