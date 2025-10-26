@@ -46,3 +46,41 @@ body {
   cursor: pointer;
   outline: none;
 }
+
+#checkin-box{
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#checkin-box-submit {
+  width: 15%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+#checkout-box{
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#checkout-box-submit {
+  width: 15%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
