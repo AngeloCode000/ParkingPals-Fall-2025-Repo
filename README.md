@@ -12,4 +12,3 @@ We will create an app that will be available on your phone, which will track the
 The user will interact with the app by checking in whenever they park on campus and be able to see available parking. The data needed is how many parking spots are in each lot, a database of parking history (what it looked on Monday at 8am, what it looked at Friday at 3pm, exc.), and how many people have parking passes. For other systems, we will be working with applying it to either android devices or iPhone. For computations and algorithmics, we will be using a predictive system to compute what parking will look like for initial tests.
 
 Yaaaaaaaay!
-
