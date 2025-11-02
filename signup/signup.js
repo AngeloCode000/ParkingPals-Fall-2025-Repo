@@ -9,6 +9,6 @@ signupButton.addEventListener("click", (e) => {
     const password = signupForm.password.value;
 
     alert("Account created, sending you to dashboard.");
-    window.location.href = "user/dashboard/dashboard.html"
+    window.location.href = "../user/dashboard/dashboard.html"
     
 })

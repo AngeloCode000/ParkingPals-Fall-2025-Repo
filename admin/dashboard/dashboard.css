@@ -28,6 +28,64 @@ body {
   justify-self: center;
 }
 
+#edit-lots-box {
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#edit-lots-box-submit {
+  width: 15%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+#view-cars-box {
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#view-cars-box-submit {
+  width: 15%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+#announcement-box {
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#announcement-box-submit {
+  width: 15%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+
 #logout-box {
   align-self: end;
   display: grid;

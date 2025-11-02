@@ -9,18 +9,18 @@ const checkoutButton = document.getElementById("checkout-box-submit");
 logoutButton.addEventListener("click", (e) => {
     e.preventDefault();
     alert("Logging Out . . .");
-    window.location.href = 'homepage/homepage.html';
+    window.location.href = '../../index.html';
     //location.reload();
 })
 checkinButton.addEventListener("click", (e) => {
     e.preventDefault();
     alert("Redirecting to checkin page");
-    window.location.href = 'user/checking/checkin/checkin.html';
+    window.location.href = '../checking/checkin/checkin.html';
     //location.reload();
 })
 checkoutButton.addEventListener("click", (e) => {
     e.preventDefault();
     alert("Redirecting to check out page");
-    window.location.href = 'user/checking/checkout/checkout.html';
+    window.location.href = '../checking/checkout/checkout.html';
     //location.reload();
 })

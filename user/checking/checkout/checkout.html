@@ -4,20 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base href="../../../../">
-  <title>Login</title>
-  
-  <link rel="stylesheet" href="user/checking/checkout/checkout.css">
-  <script defer src="user/checking/checkout/checkout.js"></script>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="./checkout.css">
+  <script defer src="./checkout.js"></script>
 </head>
 
 <body>
   <main id="main-holder">
-    <h1 id="checkout-header">Check In</h1>
+    <h1 id="checkout-header">Check Out</h1>
     
     <form id="checkout-form">
+      <p>Lot Name:</p>
       <input type="text" name="lot" id="checkout-form-lot" class="checkout-form-field" placeholder="Ex. Armstrong">
+      <p>Car ID:</p>
       <input type="text" name="carID" id="checkout-form-carID" class="checkout-form-field" placeholder="Ex. 1234">
+      <p></p>
       <input type="submit" value="checkout" id="checkout-form-submit">
     </form>
   

@@ -9,10 +9,10 @@ loginButton.addEventListener("click", (e) => {
     const carID = loginForm.carID.value;
 
     if (lot === "armstrong" && carID === "1234") {
-        alert("Successfully checked in.");
-        window.location.href = "user/dashboard/dashboard.html"
+        alert("Successfully checked out.");
+        window.location.href = "../../../user/dashboard/dashboard.html"
     }
     else {
-        loginErrorMsg.style.opacity = 1;
+        alert("Error, 1 or more of your entries is invalid.");
     }
 })
