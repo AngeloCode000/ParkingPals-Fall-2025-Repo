@@ -1,4 +1,4 @@
-console.log("Signup JS LIVE v1");
+console.log("Signup JS LIVE v3");
 const signupForm = document.getElementById("signup-form");
 const signupButton = document.getElementById("signup-form-submit");
 const signupErrorMsg = document.getElementById("signup-error-msg");
