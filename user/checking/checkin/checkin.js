@@ -10,7 +10,7 @@ loginButton.addEventListener("click", (e) => {
 
     if (lot === "armstrong" && carID === "1234") {
         alert("Successfully checked in.");
-        window.location.href = "/Parking_Pals-Fall-2025-Repo/user/dashboard/dashboard.html"
+        window.location.href = "/ParkingPals-Fall-2025-Repo/user/dashboard/dashboard.html"
     }
     else {
         loginErrorMsg.style.opacity = 1;

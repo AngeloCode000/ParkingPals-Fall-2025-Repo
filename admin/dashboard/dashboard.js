@@ -8,7 +8,7 @@ logoutButton.addEventListener("click", (e) => {
 
      
     alert("Logging Out . . .");
-    window.location.href = '/Parking_Pals-Fall-2025-Repo/index.html';
+    window.location.href = '/ParkingPals-Fall-2025-Repo/index.html';
     //location.reload();
 
 })
