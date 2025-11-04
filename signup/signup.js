@@ -27,5 +27,5 @@ signupForm?.addEventListener("submit", async (e) => {
   alert("Success! Check your email to confirm your account (if confirmations are enabled).");
 
   // Optional: send them to login or your dashboard
-  location.href = "/Parking_Pals/user/dashboard/dashboard.html";
+  location.href = "/Parking_Pals-Fall-2025-Repo/user/dashboard/dashboard.html";
 });

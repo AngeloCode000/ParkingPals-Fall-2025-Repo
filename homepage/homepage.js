@@ -7,12 +7,12 @@ const signupButton = document.getElementById("signup-box-submit");
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
     alert("Sending you to login page . . .");
-    window.location.href = '/Parking_Pals/login/login.html';
+    window.location.href = '/Parking_Pals-Fall-2025-Repo/login/login.html';
     //location.reload();
 })
 signupButton.addEventListener("click", (e) => {
     e.preventDefault();
     alert("Sending you to registration page . . .");
-    window.location.href = '/Parking_Pals/signup/signup.html';
+    window.location.href = '/Parking_Pals-Fall-2025-Repo/signup/signup.html';
     //location.reload();
 })
