@@ -8,7 +8,7 @@ logoutButton.addEventListener("click", (e) => {
 
      
     alert("Logging Out . . .");
-    window.location.href = '../../index.html';
+    window.location.href = '/Parking_Pals/index.html';
     //location.reload();
 
 })

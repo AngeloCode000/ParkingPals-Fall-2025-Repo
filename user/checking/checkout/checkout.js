@@ -10,7 +10,7 @@ loginButton.addEventListener("click", (e) => {
 
     if (lot === "armstrong" && carID === "1234") {
         alert("Successfully checked out.");
-        window.location.href = "../../../user/dashboard/dashboard.html"
+        window.location.href = "/Parking_Pals/user/dashboard/dashboard.html"
     }
     else {
         alert("Error, 1 or more of your entries is invalid.");

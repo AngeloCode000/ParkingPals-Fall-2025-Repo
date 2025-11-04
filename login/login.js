@@ -10,11 +10,11 @@ loginButton.addEventListener("click", (e) => {
 
     if (username === "user" && password === "web_dev") {
         alert("You have successfully logged in as a user.");
-        window.location.href = "../user/dashboard/dashboard.html"
+        window.location.href = "/Parking_Pals/user/dashboard/dashboard.html"
         //location.reload();
     } else if (username === "admin" && password === "web_dev") {
         alert("You have successfully logged in as an admin.");
-        window.location.href = "../admin/dashboard/dashboard.html"
+        window.location.href = "/Parking_Pals/admin/dashboard/dashboard.html"
         //location.reload();
     }
     else {
