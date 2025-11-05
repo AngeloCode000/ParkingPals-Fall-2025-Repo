@@ -2,6 +2,8 @@ console.log("Signup JS LIVE v3");
 const signupForm = document.getElementById("signup-form");
 const signupButton = document.getElementById("signup-form-submit");
 const signupErrorMsg = document.getElementById("signup-error-msg");
+const returnForm = document.getElementById("return-form");
+const returnbutton = document.getElementById("return-form-submit");
 
 signupForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -28,4 +30,11 @@ signupForm?.addEventListener("submit", async (e) => {
 
   // Optional: send them to login or your dashboard
   location.href = "/ParkingPals-Fall-2025-Repo/user/dashboard/dashboard.html";
-});
+})
+
+returnButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Redirecting to Home page");
+    window.location.href = '/ParkingPals-Fall-2025-Repo/index.html';
+    //location.reload();
+})
