@@ -3,7 +3,7 @@ const signupForm = document.getElementById("signup-form");
 const signupButton = document.getElementById("signup-form-submit");
 const signupErrorMsg = document.getElementById("signup-error-msg");
 const returnForm = document.getElementById("return-form");
-const returnbutton = document.getElementById("return-form-submit");
+const returnButton = document.getElementById("return-form-submit");
 
 signupForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
