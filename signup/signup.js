@@ -10,13 +10,18 @@ signupForm?.addEventListener("submit", async (e) => {
 
   // Treat "username" as the user's email
   const email = signupForm.username.value.trim();
-  const password = signupForm.password.value;
+  const password = signupForm.password1.value;
+  const password2 = signupForm.password2.value;
 
   if (!email || !password) {
     alert("Please enter an email and password.");
     return;
   }
 
+  if (password != password2) {
+    alert("Passwords do not match.");
+    return;
+  }
   // Create the account in Supabase
   const { data, error } = await supabase.auth.signUp({ email, password });
 
