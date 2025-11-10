@@ -27,26 +27,7 @@ body {
   align-self: start;
   justify-self: center;
 }
-
-#view-parking-box {
-  align-self: felx-start;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
-
-#view-parking-box-submit {
-  width: 100%;
-  padding: 7px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  background-color: #3a3a3a;
-  cursor: pointer;
-  outline: none;
-}
-
+/*
 #checkout-box {
   align-self: flex-start;
   display: grid;
@@ -84,6 +65,7 @@ body {
   cursor: pointer;
   outline: none;
 }
+*/
 
 #logout-box {
   align-self: end;
