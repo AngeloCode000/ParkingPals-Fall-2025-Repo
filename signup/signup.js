@@ -1,9 +1,9 @@
-console.log("Signup JS LIVE v3");
 const signupForm = document.getElementById("signup-form");
 const signupButton = document.getElementById("signup-form-submit");
 const signupErrorMsg = document.getElementById("signup-error-msg");
 const returnForm = document.getElementById("return-form");
 const returnButton = document.getElementById("return-form-submit");
+import { supabase } from '/ParkingPals-Fall-2025-Repo/js/supabaseClient.js';
 
 signupForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -29,9 +29,15 @@ signupForm?.addEventListener("submit", async (e) => {
     alert(error.message || "Signup failed.");
     return;
   }
-
-  // If email confirmations are ON, user must confirm via email first
-  alert("Success! Check your email to confirm your account (if confirmations are enabled).");
+  /*else{
+    const { data, error } = await supabase.auth.updateUser({
+      data: { hello: 'world', bruce: "cheese" }
+    })
+  }*/
+  
+  const { data: { user } } = await supabase.auth.getUser()
+  /*alert(user.user_metadata.bruce);*/
+  alert("Success!");
 
   // Optional: send them to login or your dashboard
   location.href = "/ParkingPals-Fall-2025-Repo/user/dashboard/dashboard.html";
@@ -41,5 +47,5 @@ returnButton.addEventListener("click", (e) => {
     e.preventDefault();
     alert("Redirecting to Home page");
     window.location.href = '/ParkingPals-Fall-2025-Repo/index.html';
-    //location.reload();
+    
 })
