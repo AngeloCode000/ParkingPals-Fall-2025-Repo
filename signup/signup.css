@@ -48,18 +48,18 @@ body {
   display: block;
 }
 
-#login-form {
+#signup-form {
   align-self: flex-start;
   display: grid;
   justify-items: center;
   align-items: center;
 }
 
-.login-form-field::placeholder {
+.signup-form-field::placeholder {
   color: #3a3a3a;
 }
 
-.login-form-field {
+.signup-form-field {
   border: none;
   border-bottom: 1px solid #3a3a3a;
   margin-bottom: 10px;
@@ -68,7 +68,7 @@ body {
   padding: 0px 0px 5px 5px;
 }
 
-#login-form-submit {
+#signup-form-submit {
   width: 100%;
   padding: 7px;
   border: none;
