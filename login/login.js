@@ -24,8 +24,7 @@ loginForm?.addEventListener("submit", async (e) => {
         alert("Login failed.");
         return;
     }
-    alert("Login Successful.")
-    alert("Redirecting to User Dashboard")
+    alert("Login Successful, Redirecting to User Dashboard.")
     window.location.href = '/ParkingPals-Fall-2025-Repo/user/dashboard/dashboard.html';
     
 })
