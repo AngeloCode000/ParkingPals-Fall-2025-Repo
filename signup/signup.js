@@ -29,6 +29,11 @@ signupForm?.addEventListener("submit", async (e) => {
     alert(error.message || "Signup failed.");
     return;
   }
+  else{
+    const {data, error} = await supabase.auth.updateUser({
+      data: {loggedIn: "false"}
+    })
+  }
   /*else{
     const { data, error } = await supabase.auth.updateUser({
       data: { hello: 'world', bruce: "cheese" }
