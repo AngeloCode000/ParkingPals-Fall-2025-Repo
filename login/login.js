@@ -5,25 +5,31 @@ const loginErrorMsg = document.getElementById("login-error-msg");
 const returnForm = document.getElementById("return-form");
 const returnButton = document.getElementById("return-form-submit");
 
-loginButton.addEventListener("click", (e) => {
+import { supabase, redirectIfAuthed, go } from '/ParkingPals-Fall-2025-Repo/js/supabaseClient.js';
+
+//If already logged in, go straight to dashboard
+await redirectIfAuthed('/user/dashboard/dashboard.html');
+
+// User login submission
+loginForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const username = loginForm.username.value;
     const password = loginForm.password.value;
-
-    if (username === "user" && password === "web_dev") {
-        alert("You have successfully logged in as a user.");
-        window.location.href = "/ParkingPals-Fall-2025-Repo/user/dashboard/dashboard.html"
-        //location.reload();
-    } else if (username === "admin" && password === "web_dev") {
-        alert("You have successfully logged in as an admin.");
-        window.location.href = "/ParkingPals-Fall-2025-Repo/admin/dashboard/dashboard.html"
-        //location.reload();
+    const { data, error } = await supabase.auth.signInWithPassword({
+        email: username,
+        password: password,
+    })
+    
+    if (error) {
+        alert("Login failed.");
+        return;
     }
-    else {
-        loginErrorMsg.style.opacity = 1;
-    }
+    alert("Login Successful, Redirecting to User Dashboard.")
+    window.location.href = '/ParkingPals-Fall-2025-Repo/user/dashboard/dashboard.html';
+    
 })
 
+//Return to home page
 returnButton.addEventListener("click", (e) => {
     e.preventDefault();
     alert("Redirecting to Home page");

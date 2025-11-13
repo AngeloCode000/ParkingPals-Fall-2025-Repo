@@ -61,6 +61,21 @@ body {
   outline: none;
 }
 
+h2 {
+  font-size: 1.2em;
+  letter-spacing: 0.04em;
+  margin: 0;
+  font-weight: normal;
+  color: #ff5252;
+}
+
+.announcement {
+  padding: 25px 50px 70px 100px;
+  border: 4px solid #000000;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}
+
 #eagle-image {
     width: 10%;
 }
