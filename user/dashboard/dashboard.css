@@ -101,3 +101,16 @@ body {
   cursor: pointer;
   outline: none;
 }
+
+#loggedIn-text {
+  width: 100%;        /* was 100% */
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+  justify-self: center;
+}
