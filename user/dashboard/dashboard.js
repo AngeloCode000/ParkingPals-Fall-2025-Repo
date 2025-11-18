@@ -6,6 +6,7 @@ const checkinButton = document.getElementById("checkin-box-submit");
 const checkoutForm = document.getElementById("checkout-box");
 const checkoutButton = document.getElementById("checkout-box-submit");
 const textBox = document.getElementById('loggedIn-text');
+const dropdown = document.getElementById('lots');
 
 import { supabase, requireAuth, go } from '/ParkingPals-Fall-2025-Repo/js/supabaseClient.js';
 
@@ -43,3 +44,9 @@ checkoutButton.addEventListener("click", (e) => {
     window.location.href = '/ParkingPals-Fall-2025-Repo/checking/checkout/checkout.html';
     //location.reload();
 })
+
+dropdown.addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    alert("Redirecting to " + selectedValue+" lot.");
+    window.location.href = "/ParkingPals-Fall-2025-Repo/parking_pages/"+selectedValue+"/"+selectedValue+".html";
+});
