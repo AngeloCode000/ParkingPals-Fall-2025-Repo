@@ -29,8 +29,9 @@ logoutButton.addEventListener("click", async (e) => {
     //location.reload();
 })
 
-dropdown.addEventListener('change', (event) => {
+dropdown.addEventListener('change', async (event) => {
     const selectedValue = event.target.value;
+    const {data: updateUserData, error: updateUserError} = await supabase.auth.updateUser({data: {currentLot: selectedValue}});
     alert("Redirecting to " + selectedValue+" lot.");
-    window.location.href = "/ParkingPals-Fall-2025-Repo/parking_pages/"+selectedValue+"/"+selectedValue+".html";
+    window.location.href = "/ParkingPals-Fall-2025-Repo/parking_pages/abstract/abstractlot.html";
 });

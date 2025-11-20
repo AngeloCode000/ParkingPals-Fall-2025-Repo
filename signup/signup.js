@@ -30,9 +30,7 @@ signupForm?.addEventListener("submit", async (e) => {
     return;
   }
   else{
-    const {data, error} = await supabase.auth.updateUser({
-      data: {loggedIn: "false"}
-    })
+    const {data, error} = await supabase.auth.updateUser({data: {loggedInLot: 'none'}});
   }
   /*else{
     const { data, error } = await supabase.auth.updateUser({
