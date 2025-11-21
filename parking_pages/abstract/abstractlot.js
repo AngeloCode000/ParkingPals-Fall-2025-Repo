@@ -88,7 +88,7 @@ checkoutButton.addEventListener("click", async (e) => {
             alert("Error updating data");
             return;
         }
-        avail_slot.innerHTML = (total_spots-newDataIn)+"/"+total_spots;
+        avail_slot.innerHTML = (total_spots-fill_spots)+"/"+total_spots;
         alert("Checked out!")
         const {data: updateUserData2, error: updateUserError2} = await supabase.auth.updateUser({data: {loggedInLot: 'none'}});
         location.reload();
