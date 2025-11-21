@@ -28,6 +28,7 @@ checkinHeader.innerHTML = capitalizeFirstLetter(user.user_metadata.currentLot) +
 
 //Gather data from live data as well as historical data
 const {data: parkingData, error: parkingError} = await supabase.from('parking_lots').select('*');
+alert("the databse we should be referencing: "+user.user_metadata.currentLot+"_data");
 const {data: parkingPastData, error: parkingPastError} = await supabase.from(user.user_metadata.currentLot+'_data').select('*');
 
 //Find the position of the current lot in the data structure
@@ -54,7 +55,7 @@ dataDisplayPast.innerHTML = (total_spots - Math.round(avg_fill))+"/"+total_spots
 
 checkinButton.addEventListener("click", async (e) => {
     e.preventDefault();
-    if (user.user_metadata.loggedInLot === 'none' && avail_spots > 0) {
+    if (user.user_metadata.loggedInLot === 'none' && (total_spots - fill_spots) > 0) {
         const {data: lotData,error: lotError} = await supabase.from('parking_lots').select('*').eq('slug',user.user_metadata.currentLot).single();
         let newDataIn = lotData.filled_spots+1;
         const {error: updatedError} = await supabase.from('parking_lots').update({filled_spots: newDataIn}).eq('slug',user.user_metadata.currentLot);
@@ -112,7 +113,6 @@ function getDataByHour(j,i) {
         return parkingPastData[j].h0;
     }
     else if (i === 1) {
-        alert("Did we get here at least?")
         return parkingPastData[j].h1;
     }
     else if (i === 2) {
