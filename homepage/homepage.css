@@ -12,6 +12,25 @@ body {
   background-color: #3a3a3a;
 }
 
+/* V2 announcement box */
+.banner {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: #ef7a7a;
+  padding: 8px 12px; 
+  box-sizing: border-box;
+  border: 1px solid #3a3a3a;
+}
+.banner p {
+  margin: 4px 0;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
 #main-holder {
   width: 50%;
   height: 70%;
@@ -61,6 +80,8 @@ body {
   outline: none;
 }
 
+
+/* V1 announcement box
 h2 {
   font-size: 1.4em;
   letter-spacing: 0.04em;
@@ -75,6 +96,7 @@ h2 {
   background-color: #c6c68e;
   border-radius: 1px;
 }
+*/
 
 #eagle-image {
     width: 10%;
