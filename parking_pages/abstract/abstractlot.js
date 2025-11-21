@@ -28,7 +28,6 @@ checkinHeader.innerHTML = capitalizeFirstLetter(user.user_metadata.currentLot) +
 
 //Gather data from live data as well as historical data
 const {data: parkingData, error: parkingError} = await supabase.from('parking_lots').select('*');
-alert("the databse we should be referencing: "+user.user_metadata.currentLot+"_data");
 const {data: parkingPastData, error: parkingPastError} = await supabase.from(user.user_metadata.currentLot+'_data').select('*');
 
 //Find the position of the current lot in the data structure
