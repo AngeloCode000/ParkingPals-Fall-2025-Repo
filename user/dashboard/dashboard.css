@@ -32,10 +32,6 @@ body {
 /* place elements */
 #Dashboard-header { grid-row: 1; justify-self: center; font-size: 2em; margin-bottom: 10px;}
 
-#view-parking-box { grid-row: 3; justify-self: center; }
-#checkin-box      { grid-row: 4; justify-self: center;} 
-#checkout-box     { grid-row: 5; justify-self: center;}
-
 #parking-map {
   grid-row: 2;
   justify-self: center;
@@ -52,42 +48,6 @@ body {
   display: grid;
 }
 
-#view-parking-box-submit {
-  width: auto;        /* was 100% */
-  padding: 7px 12px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
-  background-color: #3a3a3a;
-  cursor: pointer;
-  outline: none;
-}
-
-#checkin-box-submit {
-  width: auto;        /* was 100% */
-  padding: 7px 12px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
-  background-color: #3a3a3a;
-  cursor: pointer;
-  outline: none;
-}
-
-#checkout-box-submit {
-  width: auto;        /* was 100% */
-  padding: 7px 12px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
-  background-color: #3a3a3a;
-  cursor: pointer;
-  outline: none;
-}
-
 #logout-box-submit {
   width: auto;        /* was 100% */
   padding: 7px 12px;
@@ -98,17 +58,4 @@ body {
   background-color: #3a3a3a;
   cursor: pointer;
   outline: none;
-}
-
-#loggedIn-text {
-  width: 100%;        /* was 100% */
-  padding: 7px 12px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
-  background-color: #3a3a3a;
-  cursor: pointer;
-  outline: none;
-  justify-self: center;
 }
