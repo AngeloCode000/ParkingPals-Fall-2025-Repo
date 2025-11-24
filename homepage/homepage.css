@@ -6,16 +6,44 @@ body {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  display: grid;
+  display: block;
   justify-items: center;
   align-items: center;
   background-color: #3a3a3a;
+}
+
+/* V2 announcement box */
+.banner {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: #ef7a7a;
+  padding: 8px 12px; 
+  box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  border: 1px solid #3a3a3a;
+  margin: 50px;
+<<<<<<< HEAD
+>>>>>>> b791224569eeb89a2ab6666241960c905d47c945
+=======
+>>>>>>> b791224569eeb89a2ab6666241960c905d47c945
+}
+
+.banner p {
+  /*margin: 4px 0;*/
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.02em;
 }
 
 #main-holder {
   width: 50%;
   height: 70%;
   display: grid;
+  margin-top: 0;
   justify-items: center;
   align-items: center;
   background-color: white;
@@ -32,7 +60,8 @@ body {
 
 #login-box-submit {
   width: 100%;
-  padding: 7px;
+  padding: 15px;
+  font-size: 30px;
   border: none;
   border-radius: 5px;
   color: white;
@@ -51,9 +80,10 @@ body {
 
 #signup-box-submit {
   width: 100%;
-  padding: 7px;
+  padding: 15px;
   border: none;
   border-radius: 5px;
+  font-size: 30px;
   color: white;
   font-weight: bold;
   background-color: #3a3a3a;
@@ -62,7 +92,7 @@ body {
 }
 
 #eagle-image {
-    width: 10%;
+    width: 15%;
 }
     
     

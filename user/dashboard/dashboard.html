@@ -5,31 +5,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logout</title>
-  <link rel="stylesheet" href="/ParkingPals-Fall-2025-Repo/user/dashboard/dashboard2.css">
+  <link rel="stylesheet" href="/ParkingPals-Fall-2025-Repo/user/dashboard/dashboard.css">
   <script type="module" src="/ParkingPals-Fall-2025-Repo/user/dashboard/dashboard.js"></script>
+
+  <style>
+    img {
+      display: block;
+      max-width: 80%;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  
 </head>
 
 <body>
-  <main id="main-holder">
+  <main class="wrapper" id="main-holder">
     <h1 id="Dashboard-header">Dashboard</h1>
 
-    <form id="view-parking-box">
-      <input type="submit" value="View Parking" id="view-parking-box-submit">
-    </form>
+    <img src="parkingMap.svg" alt="Parking Map">
 
-    <form id="checkin-box">
-      <input type="submit" value="Check in" id="checkin-box-submit">
-    </form>
+    <label for="Lots">Choose a Parking Lot:</label>
+    <select id="lots" name="lots">
+      
+      <option value="titan">Titan</option>
+      <option value="lindbergh">Lindbergh</option>
+      <option value="sabre">Sabre</option>
+      <option value="discovery" selected>Discovery</option>
+      <option value="citation" selected>Citation</option>
+      <option value="mercury" selected>Mercury</option>
+      <option value="columbia" selected>Columbia</option>
+      <option value="eagle" selected>Eagle</option>
+      <option value="cochran" selected>Cochran</option>
+      <option value="mustang" selected>Mustang</option>
+      <option value="voyager" selected>Voyager</option>
+      <option value="enterprise" selected>Enterprise</option>
+      <option value="shepard" selected>Shepard</option>
+      <option value="dragon" selected>Dragon</option>
+      <option value="concorde" selected>Concorde</option>
+      <option value="" selected disabled hidden>Please Select</option>
+    </select>
 
-    <form id="checkout-box">
-      <input type="submit" value="Check out" id="checkout-box-submit">
-    </form>
-  
     <form id="logout-box">
       <input type="submit" value="Logout" id="logout-box-submit">
     </form>
 
-    
   </main>
 </body>
 

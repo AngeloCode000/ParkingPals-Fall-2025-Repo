@@ -1,0 +1,184 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #3a3a3a;
+}
+
+#main-holder {
+  width: 50%;
+  height: 70%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+  grid-auto-rows: 100px;
+  grid-template-columns: repeat(12, 1fr); 
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  grid-template-areas:
+    "a a a a a a a a a a a a"
+    "s s s s s s s s s s s s"
+    "t t t t t t t t t t t t"
+    "u u u u u u u u u u u u"
+    "b b b b c c c c d d d d"
+    "e e e e f f f f g g g g"
+    "o o o o o o p p p p p p"
+    "q q q q q q q q q q q r";
+}
+
+#checkin-header {
+  grid-area: a;
+  margin-bottom: 7px;
+  font-size: 45px;
+  color: #3a3a3a;
+  align-items: center;
+}
+.avail_title {
+  /*height: 50px;*/
+  margin-top: 7px;
+  margin-bottom: 7px;
+  display: grid;
+  padding: 12px;
+  text-align: center;
+  justify-self: stretch;
+  font-size: 20px;
+  align-items: center;
+  color: white;
+  background-color: #3a3a3a;
+}
+
+
+#total-spots-title {
+  grid-area: s;
+  display: grid;
+  align-self: center;
+  padding: 0;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+  color: #3a3a3a;
+  
+}
+
+#total-spots {
+  grid-area: t;
+  display: grid;
+  align-self: center;
+  padding: 7px;
+  margin: 0;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background-color: #3a3a3a;
+}
+
+#avail-big-title {
+  grid-area: u;
+  display: grid;
+  align-self: center;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 7px;
+  margin: 0;
+  color: #3a3a3a;
+}
+#p1 {
+  grid-area:b;
+}
+#p2 {
+  grid-area:c;
+}
+#p3 {
+  grid-area: d;
+}
+
+.number {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 7px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+
+}
+#availability-slot {
+  grid-area: e;
+}
+#availability-slot-past {
+  grid-area: f;
+}
+#availability-slot-combined {
+  grid-area: g;
+}
+
+.box {
+  width: 80%;
+}
+
+#checkout-box {
+  grid-area: o;
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#checkout-box-submit {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 38px;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+#checkin-box {
+  grid-area: p;
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#checkin-box-submit {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 38px;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+#return-form {
+  grid-area: r;
+  align-self: end;
+  justify-self: end;
+  
+}
+
+#return-form-submit {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
