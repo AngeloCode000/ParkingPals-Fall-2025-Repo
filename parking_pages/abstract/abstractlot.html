@@ -12,14 +12,19 @@
 <body>
   <main id="main-holder">
     <h1 id="checkin-header"></h1>
-    <p>Availabile slots (live data): </p>
-    <p id="availability-slot"></p>
-    <p>Typical available spots at this time based on past data: </p>
-    <p id="availability-slot-past"></p>
-    <form id="checkin-box">
+    <p id="total-spots-title">Total Spots:</p>
+    <p id="total-spots"></p>
+    <p id="avail-big-title">Available Spots:</p>
+    <p id="p1" class="avail_title">Live Data</p>
+    <p id="availability-slot" class="number"></p>
+    <p id="p2" class="avail_title">Past Trends</p>
+    <p id="availability-slot-past" class="number"></p>
+    <p id="p3" class="avail_title">Combined</p>
+    <p id="availability-slot-combined" class="number"></p>
+    <form id="checkin-box" class="box">
       <input type="submit" value="Check in" id="checkin-box-submit">
     </form>
-    <form id="checkout-box">
+    <form id="checkout-box" class="box">
       <input type="submit" value="Check Out" id="checkout-box-submit">
     </form>
     <form id="return-form">

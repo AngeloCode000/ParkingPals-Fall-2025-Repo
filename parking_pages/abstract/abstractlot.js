@@ -12,6 +12,8 @@ const dataDisplayPast = document.getElementById("availability-slot-past")
 const checkinButton = document.getElementById("checkin-box-submit");
 const checkoutButton = document.getElementById("checkout-box-submit");
 const checkinHeader = document.getElementById("checkin-header")
+const totalspots = document.getElementById("total-spots")
+const combined = document.getElementById("availability-slot-combined")
 const now = new Date();
 const hour = now.getHours();
 
@@ -48,8 +50,14 @@ avg_fill = avg_fill/parkingPastData.length;
 
 let fill_spots = parkingData[counter].filled_spots;
 let total_spots = parkingData[counter].total_spots;
-avail_slot.innerHTML = (total_spots - fill_spots)+"/"+total_spots;
-dataDisplayPast.innerHTML = (total_spots - Math.round(avg_fill))+"/"+total_spots;
+totalspots.innerHTML = total_spots;
+avail_slot.innerHTML = (total_spots - fill_spots);
+dataDisplayPast.innerHTML = (total_spots - Math.round(avg_fill));
+
+const live_weight = .1;
+const pastweight = .9;
+let weighted_avg = Math.round(((total_spots - fill_spots)*live_weight)+((total_spots - Math.round(avg_fill))*pastweight));
+combined.innerHTML = weighted_avg;
 
 
 checkinButton.addEventListener("click", async (e) => {
@@ -62,7 +70,7 @@ checkinButton.addEventListener("click", async (e) => {
             alert("Error updating data");
             return;
         }
-        avail_slot.innerHTML = (total_spots-newDataIn)+"/"+total_spots;
+        avail_slot.innerHTML = (total_spots-newDataIn);
         alert("Checked in!")
         const {data: updateUserData2, error: updateUserError2} = await supabase.auth.updateUser({data: {loggedInLot: user.user_metadata.currentLot}});
         location.reload();
@@ -88,7 +96,7 @@ checkoutButton.addEventListener("click", async (e) => {
             alert("Error updating data");
             return;
         }
-        avail_slot.innerHTML = (total_spots-newDataIn)+"/"+total_spots;
+        avail_slot.innerHTML = (total_spots-fill_spots);
         alert("Checked out!")
         const {data: updateUserData2, error: updateUserError2} = await supabase.auth.updateUser({data: {loggedInLot: 'none'}});
         location.reload();
