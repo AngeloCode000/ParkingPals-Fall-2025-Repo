@@ -35,6 +35,10 @@ body {
     "q q q q q q q q q q q r";
 }
 
+#lot-title {
+  grid-area:c;
+}
+
 #checkin-header {
   grid-area: a;
   margin-bottom: 7px;

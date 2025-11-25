@@ -24,16 +24,21 @@ body {
   border-radius: 7px;
   box-shadow: 0 0 5px 2px black;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas:
+    "a a a"
+    "b b b"
+    "c c c"
+    "d d d"
+    "e f g";
   gap: 16px;
   padding: 16px;
 }
 
 /* place elements */
-#Dashboard-header { grid-row: 1; justify-self: center; font-size: 2em; margin-bottom: 10px;}
+#Dashboard-header { grid-area: a; justify-self: center; font-size: 2em; margin-bottom: 10px;}
 
 #parking-map {
-  grid-row: 2;
+  grid-area:b;
   justify-self: center;
   max-width: 90%;
   height: auto;
@@ -41,8 +46,17 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+#lot-title {
+  grid-area:c;
+}
+
+
+#lots {
+  grid-area: d;
+}
+
 #logout-box {
-  grid-row: 6; 
+  grid-area: g; 
   justify-self: end;
   align-self: end;
   display: grid;
@@ -63,8 +77,9 @@ body {
 
 #feedback-box {
     display: grid;
-    align-self: center;
-    justify-self: center;
+    grid-area: e;
+    align-self: end;
+    justify-self: start;
 }
 
 #feedback-box-submit {
